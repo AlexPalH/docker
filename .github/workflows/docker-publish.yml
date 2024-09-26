@@ -25,6 +25,7 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
       with:
-        context: .
+        context: ./docker        # Ruta al directorio donde se encuentra tu Dockerfile
+        file: ./docker/Dockerfile # Especifica la ruta al Dockerfile
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/docker-demo:latest
