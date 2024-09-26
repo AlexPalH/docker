@@ -21,6 +21,9 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}   # Asegúrate de que este secreto esté configurado correctamente
         password: ${{ secrets.DOCKER_PASSWORD }}   # Asegúrate de que este secreto esté configurado correctamente
+   
+    - name: List files
+      run: ls -la
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
