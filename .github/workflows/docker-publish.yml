@@ -30,4 +30,5 @@ jobs:
       with:
         context: .                                   # Asegúrate de que tu Dockerfile esté en la raíz o ajusta la ruta
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/docker-demo:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/docker-demo:v1.0.0
+
